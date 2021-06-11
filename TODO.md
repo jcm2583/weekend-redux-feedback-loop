@@ -1,3 +1,5 @@
+[ ] - HAVE FUN!!! YOU ARE STILL LEARNING.
+
 [ ] - TEST!!! TEST!!! TEST!!!
     [ ] - TEST EACH STEP
     [ ] - CONSOLE LOGS ARE GREAT HELPERS
@@ -45,3 +47,5 @@
 
 [ ] - Need a Submission Success Page
     [ ] - Button to click on to take user back to page 1
+
+[ ] - If everything is functionally working, mess around with the appearance and Material-UI
