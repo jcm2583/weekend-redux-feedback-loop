@@ -11,12 +11,28 @@ import logger from 'redux-logger';
 
 
 
-const feedbackReducer = (state = [], action) => {
-    switch (action.type) {
-        case 'GET_FEEDBACK' :
-            return action.payload;
+const storeFeedbackReducer = (state = {}, action) => {
+    switch(action.type) {
+        case 'ADD_FEELING' :
+            return {...state, feeling: action.payload};
+
+        case 'ADD_UNDERSTANDING' :
+            return {...state, understanding: action.payload};
+
+        case 'ADD_SUPPORT' :
+            return {...state, support: action.payload};
+
+        case 'ADD_COMMENTS' :
+            return {...state, comments: action.payload};
+            
+            
+            default : 
+                return state;
     }
+    
     return state;
+
+
 }
 
 
@@ -24,7 +40,7 @@ const feedbackReducer = (state = [], action) => {
 
 const store = createStore(
     combineReducers({
-        feedbackReducer
+        storeFeedbackReducer
     }),
     applyMiddleware(
         logger
