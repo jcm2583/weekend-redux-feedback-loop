@@ -11,12 +11,20 @@ import logger from 'redux-logger';
 
 
 
+const feedbackReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'GET_FEEDBACK' :
+            return action.payload;
+    }
+    return state;
+}
+
 
 
 
 const store = createStore(
     combineReducers({
-
+        feedbackReducer
     }),
     applyMiddleware(
         logger
