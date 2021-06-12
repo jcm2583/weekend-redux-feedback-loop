@@ -18,9 +18,23 @@ router.get('/', (req, res) => {
     });
 })
 
-// router.post('/', (req, res) => {
+router.post('/', (req, res) => {
+    console.log('In server router, req.body is', req.body);
+    // create a variable that contains the user info
+    const newData = req.body;
+    //need to sanitize the user input to send to database
+    const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+    VALUES ($1, $2, $3, $4);`;
 
-// })
+    //use pool.query to send to server
+    pool.query(queryText, [newData.feeling, newData.understanding, newData.support, newData.comments])
+    .then( response => {
+        res.sendStatus(201);
+    }).catch( err => {
+        console.log('There was an error in the POST route', err);
+        res.sendStatus(500);
+    })
+})
 
 
 

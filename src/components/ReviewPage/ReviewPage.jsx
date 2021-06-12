@@ -1,33 +1,39 @@
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import {useDispatch, useSelector} from 'react-redux'; 
-import {useEffect} from 'react';
+import { useSelector } from 'react-redux';
 
 function ReviewPage() {
-    
 
+    //declare history
+    const history = useHistory();
     //need to call on redux to bring in feedback information
     const feedback = useSelector(store => store.storeFeedbackReducer);
 
     //create a function that posts the data to the server
     const submitInfo = () => {
-        
+        console.log(feedback);
+        axios.post('/feedback', feedback)
+            .then(response => {
+                console.log('Feedback posted. Response:', response);
+            }).catch(err => {
+                console.log('There was an error in th POST route', err);
+            });
+        //send to next page
+        history.push('/submissionPage')
     }
-    
+
     return (
         <div>
             <h2>Review Your Responses</h2>
-      
-                <div>
-                    <h3>Feeling: {feedback.feeling}</h3>
-                    <h3>Understanding: {feedback.understanding}</h3>
-                    <h3>Support: {feedback.support}</h3>
-                    <h3>Comments: {feedback.comments}</h3>
-                </div>
-     
-            <Link to='/submissionPage'>
-                <button onClick={submitInfo}>Submit</button>
-            </Link>
+
+            <div>
+                <h3>Feeling: {feedback.feeling}</h3>
+                <h3>Understanding: {feedback.understanding}</h3>
+                <h3>Support: {feedback.support}</h3>
+                <h3>Comments: {feedback.comments}</h3>
+            </div>
+
+            <button onClick={submitInfo}>Submit</button>
         </div>
     )
 }
