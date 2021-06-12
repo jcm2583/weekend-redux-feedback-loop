@@ -5,7 +5,7 @@
     [ ] - CONSOLE LOGS ARE GREAT HELPERS
 
 [ ] - Need to create a fixed header that will stay when switching components
-    [ ] - Will need to import router
+    [ x ] - Will need to import router
     [ ] - Will need to create routes to each component
 
 [ ] - Will need to set up server routes
@@ -15,10 +15,12 @@
 
 
 [ ] - Need to create  4 main components that will cover: 
-    [ ] - How are you feeling today?
-    [ ] - How well are you understanding the content?
-    [ ] - How well are you being supported?
-    [ ] - Any comments you want to leave?
+    [ x ] - How are you feeling today?
+    [ x ] - How well are you understanding the content?
+    [ x ] - How well are you being supported?
+    [ x ] - Any comments you want to leave?
+    [ x ] - Review page
+    [ x ] - Submission page
     [ ] - Each component will need a button that will take them to next page
 
 [ ] - How are you feeling today component?
