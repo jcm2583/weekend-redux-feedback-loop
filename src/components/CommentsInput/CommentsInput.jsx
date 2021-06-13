@@ -39,18 +39,19 @@ function CommentsInput() {
             <h2>Any comments to add?</h2>
             <form onSubmit={handleSubmit}>
                 <TextField
-                multiline
-                label="Add comment"
-                type="text"
-                onChange={(evt) => setCommentsInput(evt.target.value)} />
-                <Button 
-                variant="outlined"
-                color="secondary"
-                onClick={goBack}>Go Back</Button>
-                <Button 
-                variant="outlined"
-                color="primary"
-                type="submit">Next
+                    multiline
+                    style={{ width: 300 }}
+                    label="Add comment"
+                    type="text"
+                    onChange={(evt) => setCommentsInput(evt.target.value)} />
+                <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={goBack}>Go Back</Button>
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    type="submit">Next
                 </Button>
             </form>
         </div>

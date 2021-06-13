@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import './FeelingInput.css';
 
 function FeelingInput() {
-    
+
     //declare dispatch 
     const dispatch = useDispatch();
     //declare history
@@ -34,20 +34,23 @@ function FeelingInput() {
     return (
         <div>
             <h2>How are you feeling today?</h2>
-            <h3>Please select a number between 1-5</h3>
             <form onSubmit={handleSubmit}>
                 <TextField
-                type="number" 
-                InputProps={{ inputProps: { min: 1, max: 5 } }}
-                required="required" 
-                value={feelingInput}
-                onChange={(evt) => setFeelingInput(evt.target.value)} />
-                <Button 
-                type="submit"
-                variant="outlined" 
-                color="primary"> Next 
+                    label="Please choose a number between 1-5"
+                    style={{ width: 300 }}
+                    type="number"
+                    InputProps={{ inputProps: { min: 1, max: 5 } }}
+                    required="required"
+                    value={feelingInput}
+                    onChange={(evt) => setFeelingInput(evt.target.value)} />
+                <Button
+                    type="submit"
+                    variant="outlined"
+                    color="primary"> Next
                 </Button>
             </form>
+            <h3>1 = I have had better days...</h3>
+            <h3>5 = Feeling great!</h3>
         </div>
     )
 }

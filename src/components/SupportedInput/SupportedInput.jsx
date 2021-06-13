@@ -1,11 +1,11 @@
-import {useHistory} from 'react-router-dom';
-import {useState} from 'react';
-import {useDispatch} from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
-function SupportedInput () {
+function SupportedInput() {
 
     //declare dispatch
     const dispatch = useDispatch();
@@ -39,22 +39,26 @@ function SupportedInput () {
             <h2>How supported do you feel?</h2>
             <form onSubmit={handleSubmit}>
                 <TextField
-                type="number" 
-                InputProps={{ inputProps: { min: 1, max: 5 } }}
-                required="required" 
-                value={supportInput} 
-                onChange={ (evt) => setSupportInput(evt.target.value)}/>
-            <Button
-            variant="outlined"
-            color="secondary"
-            onClick={goBack}>Go Back
+                    label="1 - 5"
+                    style={{ width: 300 }}
+                    type="number"
+                    InputProps={{ inputProps: { min: 1, max: 5 } }}
+                    required="required"
+                    value={supportInput}
+                    onChange={(evt) => setSupportInput(evt.target.value)} />
+                <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={goBack}>Go Back
             </Button>
-            <Button 
-            variant="outlined" 
-            color="primary"
-            type="submit">Next
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    type="submit">Next
             </Button>
             </form>
+            <h3>1 = What support?</h3>
+            <h3>5 = Couldn't ask for more! This is awesome!</h3>
         </div>
     )
 }

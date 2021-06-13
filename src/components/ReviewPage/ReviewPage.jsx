@@ -40,14 +40,14 @@ function ReviewPage() {
                 <h3>Comments: {feedback.comments}</h3>
             </div>
 
-            <Button 
-            color="secondary"
-            variant="outlined"
-            onClick={goBack}>Go Back</Button>
-            <Button 
-            variant="outlined"
-            color="primary"
-            onClick={submitInfo}>Submit
+            <Button
+                color="secondary"
+                variant="outlined"
+                onClick={goBack}>Go Back</Button>
+            <Button
+                variant="outlined"
+                color="primary"
+                onClick={submitInfo}>Submit
             </Button>
         </div>
     )
