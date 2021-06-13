@@ -2,6 +2,8 @@ import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 function SupportedInput () {
 
@@ -36,14 +38,22 @@ function SupportedInput () {
         <div>
             <h2>How supported do you feel?</h2>
             <form onSubmit={handleSubmit}>
-                <button onClick={goBack}>Go Back</button>
                 <TextField
                 type="number" 
                 InputProps={{ inputProps: { min: 1, max: 5 } }}
                 required="required" 
                 value={supportInput} 
                 onChange={ (evt) => setSupportInput(evt.target.value)}/>
-            <button type="submit">Next</button>
+            <Button
+            variant="outlined"
+            color="secondary"
+            onClick={goBack}>Go Back
+            </Button>
+            <Button 
+            variant="outlined" 
+            color="primary"
+            type="submit">Next
+            </Button>
             </form>
         </div>
     )

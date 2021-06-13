@@ -1,6 +1,8 @@
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import Button from '@material-ui/core/Button';
+
 
 function ReviewPage() {
 
@@ -38,8 +40,15 @@ function ReviewPage() {
                 <h3>Comments: {feedback.comments}</h3>
             </div>
 
-            <button onClick={goBack}>Go Back</button>
-            <button onClick={submitInfo}>Submit</button>
+            <Button 
+            color="secondary"
+            variant="outlined"
+            onClick={goBack}>Go Back</Button>
+            <Button 
+            variant="outlined"
+            color="primary"
+            onClick={submitInfo}>Submit
+            </Button>
         </div>
     )
 }

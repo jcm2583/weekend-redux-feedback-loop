@@ -2,6 +2,8 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import './FeelingInput.css';
 
 function FeelingInput() {
     
@@ -40,7 +42,11 @@ function FeelingInput() {
                 required="required" 
                 value={feelingInput}
                 onChange={(evt) => setFeelingInput(evt.target.value)} />
-                <button type="submit">Next</button>
+                <Button 
+                type="submit"
+                variant="outlined" 
+                color="primary"> Next 
+                </Button>
             </form>
         </div>
     )

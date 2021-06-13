@@ -1,4 +1,6 @@
 import {useHistory} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 function WelcomePage () {
 
@@ -15,7 +17,11 @@ function WelcomePage () {
     <div>
         <h2>Welcome to our feedback survey!</h2>
         <h3>Please click the button below to begin</h3>
-        <button onClick={beginSurvey}>Begin Feedback Survey</button>
+        <Button 
+        variant="outlined"
+        color="primary"
+        onClick={beginSurvey}>Begin Feedback Survey
+        </Button>
     </div>
     
     )

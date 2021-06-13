@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import '@fontsource/roboto';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+// import { orange } from '@material-ui/core/colors';
 
 //list of components
 import FeelingInput from '../FeelingInput/FeelingInput';
@@ -13,17 +15,28 @@ import ReviewPage from '../ReviewPage/ReviewPage';
 import SubmissionPage from '../SubmissionPage/SubmissionPage';
 import WelcomePage from '../WelcomePage/WelcomePage';
 
+const theme = createMuiTheme ({
+  palette: {
+    primary: {
+      main: '#D95313'  
+    },
+    secondary: {
+      main: '#0A77B2'
+    }
+  }
+})
+
 
 function App() {
 
   return (
-    <Router>
+    <ThemeProvider theme={theme}>
+  <Router>
       <div className='App'>
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-
 
         <div>
           <Route path='/' exact>
@@ -57,6 +70,7 @@ function App() {
 
       </div>
     </Router>
+  </ThemeProvider>
   );
 }
 

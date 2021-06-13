@@ -2,6 +2,9 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
+import './CommentsInput.css';
+import Button from '@material-ui/core/Button';
+
 
 function CommentsInput() {
 
@@ -34,13 +37,21 @@ function CommentsInput() {
     return (
         <div>
             <h2>Any comments to add?</h2>
-            <button onClick={goBack}>Go Back</button>
             <form onSubmit={handleSubmit}>
                 <TextField
-                variant="filled" 
+                multiline
+                label="Add comment"
                 type="text"
                 onChange={(evt) => setCommentsInput(evt.target.value)} />
-                <button type="submit">Next</button>
+                <Button 
+                variant="outlined"
+                color="secondary"
+                onClick={goBack}>Go Back</Button>
+                <Button 
+                variant="outlined"
+                color="primary"
+                type="submit">Next
+                </Button>
             </form>
         </div>
     )

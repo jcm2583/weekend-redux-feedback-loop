@@ -1,4 +1,6 @@
 import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 function SubmissionPage () {
     
@@ -7,7 +9,10 @@ function SubmissionPage () {
         <div>
         <h2>Submitted!</h2>
         <Link to='/'>
-        <button>Start Another Submission!</button>
+        <Button
+        variant="outlined"
+        color="primary"
+        >Start Another Submission!</Button>
         </Link>
         </div>
     )
