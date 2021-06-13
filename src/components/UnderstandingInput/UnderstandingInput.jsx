@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import './UnderstandingInput.css'
-
 
 function UnderstandingInput() {
 
@@ -40,9 +38,14 @@ function UnderstandingInput() {
         <div>
             <h2>How well do you understand the material?</h2>
             <form onSubmit={handleSubmit}>
-                <TextField
+            <Button
+                    style={{marginRight: '32px'}}
+                    variant="outlined"
+                    color="secondary"
+                    onClick={goBack}>Go Back
+            </Button>
+            <TextField
                     label="1 - 5"
-                    inputProps={{ style: { textAlign: 'center' } }}
                     style={{ width: 300 }}
                     type="number"
                     InputProps={{ inputProps: { min: 1, max: 5 } }}
@@ -50,11 +53,7 @@ function UnderstandingInput() {
                     value={understandingInput}
                     onChange={(evt) => setUnderstandingInput(evt.target.value)} />
                 <Button
-                    className="buttonClass"
-                    variant="outlined"
-                    color="secondary"
-                    onClick={goBack}>Go Back</Button>
-                <Button
+                    style={{marginLeft: '32px'}}
                     variant="outlined"
                     color="primary"
                     type="submit">Next

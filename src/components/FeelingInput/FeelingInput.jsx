@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import './FeelingInput.css';
 
 function FeelingInput() {
 
@@ -44,6 +43,7 @@ function FeelingInput() {
                     value={feelingInput}
                     onChange={(evt) => setFeelingInput(evt.target.value)} />
                 <Button
+                    style={{marginLeft: '32px'}}
                     type="submit"
                     variant="outlined"
                     color="primary"> Next

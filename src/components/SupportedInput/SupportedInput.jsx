@@ -38,6 +38,12 @@ function SupportedInput() {
         <div>
             <h2>How supported do you feel?</h2>
             <form onSubmit={handleSubmit}>
+                <Button
+                    style={{ marginRight: '32px' }}
+                    variant="outlined"
+                    color="secondary"
+                    onClick={goBack}>Go Back
+            </Button>
                 <TextField
                     label="1 - 5"
                     style={{ width: 300 }}
@@ -47,11 +53,7 @@ function SupportedInput() {
                     value={supportInput}
                     onChange={(evt) => setSupportInput(evt.target.value)} />
                 <Button
-                    variant="outlined"
-                    color="secondary"
-                    onClick={goBack}>Go Back
-            </Button>
-                <Button
+                    style={{ marginLeft: '32px' }}
                     variant="outlined"
                     color="primary"
                     type="submit">Next
