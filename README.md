@@ -9,6 +9,12 @@ I created an application that allows a user to submit feedback using separate co
 ## Screen Shot
 
 ![Home Page](/public/images/feedback1.png)
+![Feeling Page](/public/images/feedback2.png)
+![Understanding Page](/public/images/feedback3.png)
+![Support Page](/public/images/feedback4.png)
+![Comments Page](/public/images/feedback5.png)
+![Review Page](/public/images/feedback6.png)
+![Submit Page](/public/images/feedback7.png)
 
 ### Prerequisites
 
