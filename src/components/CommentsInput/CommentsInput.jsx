@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import TextField from '@material-ui/core/TextField';
 
 function CommentsInput() {
 
@@ -25,12 +26,20 @@ function CommentsInput() {
         history.push('/reviewPage');
     }
 
+    //create a function that allows a user to go to the previous page
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div>
-            <h2>Do you have any comments?</h2>
+            <h2>Any comments to add?</h2>
+            <button onClick={goBack}>Go Back</button>
             <form onSubmit={handleSubmit}>
-                <input type="text"
-                    onChange={(evt) => setCommentsInput(evt.target.value)} />
+                <TextField
+                variant="filled" 
+                type="text"
+                onChange={(evt) => setCommentsInput(evt.target.value)} />
                 <button type="submit">Next</button>
             </form>
         </div>

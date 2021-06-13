@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
 
 function UnderstandingInput() {
 
@@ -27,12 +28,22 @@ function UnderstandingInput() {
         history.push('/supportedInput');
     }
 
+    //create a function that allows a user to go to the previous page
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div>
             <h2>How well do you understand the material?</h2>
             <form onSubmit={handleSubmit}>
-                <input type="number" min="1" max="5" required="required" value={understandingInput}
-                    onChange={(evt) => setUnderstandingInput(evt.target.value)} />
+            <button onClick={goBack}>Go Back</button>
+                <TextField 
+                type="number" 
+                InputProps={{ inputProps: { min: 1, max: 5 } }}
+                required="required" 
+                value={understandingInput}
+                onChange={(evt) => setUnderstandingInput(evt.target.value)} />
                 <button type="submit">Next</button>
             </form>
         </div>

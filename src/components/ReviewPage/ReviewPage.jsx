@@ -22,6 +22,11 @@ function ReviewPage() {
         history.push('/submissionPage')
     }
 
+    //create a function that allows a user to go to the previous page
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div>
             <h2>Review Your Responses</h2>
@@ -33,6 +38,7 @@ function ReviewPage() {
                 <h3>Comments: {feedback.comments}</h3>
             </div>
 
+            <button onClick={goBack}>Go Back</button>
             <button onClick={submitInfo}>Submit</button>
         </div>
     )

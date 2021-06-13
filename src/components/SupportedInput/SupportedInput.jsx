@@ -1,6 +1,7 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import TextField from '@material-ui/core/TextField';
 
 function SupportedInput () {
 
@@ -26,11 +27,21 @@ function SupportedInput () {
         history.push('/commentsInput')
     }
 
+    //create a function that allows a user to go to the previous page
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div>
             <h2>How supported do you feel?</h2>
             <form onSubmit={handleSubmit}>
-                <input type="number" min="1" max="5" required="required" value={supportInput} 
+                <button onClick={goBack}>Go Back</button>
+                <TextField
+                type="number" 
+                InputProps={{ inputProps: { min: 1, max: 5 } }}
+                required="required" 
+                value={supportInput} 
                 onChange={ (evt) => setSupportInput(evt.target.value)}/>
             <button type="submit">Next</button>
             </form>
