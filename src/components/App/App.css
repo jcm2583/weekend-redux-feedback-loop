@@ -18,14 +18,25 @@
   font-size: large;
 }
 
+body {
+  background-color: #F0F0F0;
+}
+
+.componentClass {
+  background-color: #DEDEDE;
+  margin-left: 320px;
+  margin-right: 320px;
+}
 
 h2 {
   margin-top: 128px;
   margin-bottom: 64px;
+  padding-top: 32px;
 }
 
 h3 {
-  margin-top: 48px;
+  margin-top: 24px;
+  padding-bottom: 32px;
 }
 
 

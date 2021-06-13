@@ -8,7 +8,7 @@ I created an application that allows a user to submit feedback using separate co
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Home Page](/public/images/feedback1.png)
 
 ### Prerequisites
 

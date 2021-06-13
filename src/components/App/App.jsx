@@ -37,7 +37,7 @@ function App() {
           <h1 className='App-title'>Daily Feedback!</h1>
         </header>
 
-        <div>
+        <div className="componentClass">
           <Route path='/' exact>
             <WelcomePage />
           </Route>
