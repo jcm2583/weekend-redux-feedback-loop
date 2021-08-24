@@ -64,4 +64,4 @@ the user wants to go back and change their answer to the previous question
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equiped and helped me make this application a reality.
 
 ## Support
-If you have suggestions or issues, please email me at [jmotes2583@gmail.com](www.google.com)
+If you have suggestions or issues, please email me at [jmotes2583@gmail.com](jmotes2583@gmail.com)
